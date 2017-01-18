@@ -24,7 +24,7 @@
 
 <header>
     <h2>{% trans 'Payment methods' %}</h2>
-    <p>{% trans 'Please choose payment type and pay for your chosen products.' %}</p>
+    <p>{% trans 'Please choose payment type and pay for your chosen products. ' %}<b>{% trans 'Use PayPal if you wish to setup automatic reoccuring payments.' %}</b></p>
 </header>
 <form method="post" action="{{ 'api/guest/invoice/payment'|link }}" class="api-form" data-api-redirect="{{ ('invoice/'~invoice.hash)|link({'auto_redirect' : 1}) }}">
     <input type="hidden" name="hash" value="{{invoice.hash}}"/>
